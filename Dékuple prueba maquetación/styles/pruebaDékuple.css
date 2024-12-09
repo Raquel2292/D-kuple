@@ -1,0 +1,214 @@
+@font-face {
+    font-family: BNPPSans-Bold;
+    src: url('../fuente/BNPPSans-Bold.woff');
+}
+
+body,
+html,
+footer {
+    margin: 0;
+    padding: 0;
+    font-family: BNPPSans-Bold;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header .links {
+    gap: 20px;
+    display: none;
+}
+
+header .links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    background-image: url(../imagenes/bkg_home.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-form {
+    width: 70%;
+    color: white;
+    text-align: left;
+    background-color: rgb(0 75 58);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 20px 20px 40px;
+}
+
+.container .section-form h1 {
+    font-size: 24px;
+}
+
+.container .section-form p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+header nav ul {
+    display: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+header input:checked~ul {
+    display: block;
+}
+
+header nav input {
+    display: none;
+}
+
+header nav label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    user-select: none;
+    cursor: pointer;
+}
+
+header nav label:hover {
+    background: white;
+}
+
+header nav ul {
+    margin-top: 0;
+    padding: 0;
+    width: 200px;
+}
+
+header nav li {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+
+header nav ul li a {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300px;
+}
+
+.container .section-form .form-group {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.container .section-form .form-group input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.container .section-form .form-group button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(0 145 90);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: rgb(45 41 38);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .footer-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    font-weight: 300px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        background-position: center right;
+        background-size: 70%;
+        align-items: flex-start;
+    }
+
+    .section-form {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1025px) {
+    .container {
+        background-size: 50%;
+    }
+
+    .section-form {
+        padding: 40px 0px 20px 80px;
+    }
+
+    .section-form h1 {
+        font-size: 32px;
+    }
+
+    header .links {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+    }
+}
